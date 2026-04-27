@@ -1,0 +1,145 @@
+/* SafetyLink marketing site styles */
+@import url("../../colors_and_type.css");
+
+body { background: var(--sl-bg); color: var(--sl-fg); }
+
+/* ===== shared button ===== */
+.sl-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid transparent;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600;font-size:14px;cursor:pointer;line-height:1;transition:background var(--sl-dur-base) var(--sl-ease-standard),box-shadow var(--sl-dur-base) var(--sl-ease-standard),border-color var(--sl-dur-base) var(--sl-ease-standard);}
+.sl-btn--lg{padding:14px 22px;font-size:15px;}
+.sl-btn--accent{background:var(--sl-accent);color:#fff;box-shadow:var(--sl-shadow-xs);}
+.sl-btn--accent:hover{background:var(--sl-accent-hover);}
+.sl-btn--primary{background:var(--sl-brand);color:#fff;}
+.sl-btn--primary:hover{background:var(--sl-brand-hover);}
+.sl-btn--secondary{background:#fff;border-color:var(--sl-border-strong);color:var(--sl-fg);}
+.sl-btn--secondary:hover{border-color:var(--sl-fg);background:var(--sl-bg-subtle);}
+.sl-btn--ghost{background:transparent;color:var(--sl-fg);}
+.sl-btn--ghost:hover{background:var(--sl-ink-100);}
+.sl-btn--ghost-on-dark{background:transparent;color:#fff;border-color:rgba(255,255,255,.25);}
+.sl-btn--ghost-on-dark:hover{border-color:#fff;background:rgba(255,255,255,.06);}
+
+.sl-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;line-height:1.2;border:1px solid transparent;}
+.sl-badge--green{background:var(--sl-success-100);color:var(--sl-success-700);border-color:var(--sl-green-300);}
+.sl-badge--warn{background:var(--sl-warning-100);color:var(--sl-warning-700);border-color:#FCD34D;}
+.sl-badge--danger{background:var(--sl-danger-100);color:var(--sl-danger-700);border-color:#FECACA;}
+.sl-dot{width:6px;height:6px;border-radius:50%;background:var(--sl-success-500);}
+.sl-mono{font-family:var(--sl-font-mono);font-size:12px;color:var(--sl-fg-subtle);}
+.m-lede{font-size:18px;line-height:1.6;color:var(--sl-fg-muted);max-width:60ch;}
+
+/* ===== nav ===== */
+.m-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--sl-border);}
+.m-nav-inner{max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.m-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--sl-navy-900);text-decoration:none;letter-spacing:-.01em;}
+.m-brand--light{color:#fff;}
+.m-menu{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--sl-fg-muted);}
+.m-menu a{cursor:pointer;}
+.m-menu a:hover{color:var(--sl-fg);}
+.m-menu a.active{color:var(--sl-fg);font-weight:600;}
+.m-cta{display:flex;gap:10px;align-items:center;}
+
+/* ===== hero ===== */
+.m-hero{position:relative;color:#fff;overflow:hidden;}
+.m-hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,#14375B 0%,#0B2238 100%);}
+.m-hero-bg::after{content:"";position:absolute;inset:0;background-image:url(../../assets/mark-tile.png);background-size:240px 240px;background-repeat:repeat;opacity:.08;}
+.m-hero-inner{position:relative;max-width:1280px;margin:0 auto;padding:96px 28px 112px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;}
+.m-hero-h1{font-size:60px;font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px;text-wrap:balance;}
+.m-hero-lede{font-size:20px;line-height:1.55;color:rgba(255,255,255,.78);margin:0 0 28px;max-width:36ch;}
+.m-hero-actions{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap;}
+.m-hero-meta{display:flex;gap:24px;color:rgba(255,255,255,.65);font-size:13px;flex-wrap:wrap;}
+.m-hero-meta span{display:inline-flex;align-items:center;gap:8px;}
+.m-hero-meta svg{width:16px;height:16px;color:var(--sl-green-400);}
+
+.m-hero-card{background:#fff;color:var(--sl-fg);border-radius:14px;padding:22px;box-shadow:var(--sl-shadow-xl);}
+.m-hero-card-head{display:flex;align-items:center;justify-content:space-between;}
+.m-hero-card-title{font-size:18px;font-weight:700;margin:14px 0 12px;}
+.m-hero-card-rows{display:flex;flex-direction:column;gap:8px;}
+.m-hero-row{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--sl-border);border-radius:8px;background:#fff;}
+.m-row-ico{width:18px;height:18px;}
+.m-row-ico--ok{color:var(--sl-success-500);}
+.m-row-ico--warn{color:var(--sl-warning-500);}
+.m-row-t{font-size:14px;font-weight:500;color:var(--sl-fg);}
+.m-hero-card-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;}
+.m-progress{flex:1;height:6px;background:var(--sl-ink-100);border-radius:3px;overflow:hidden;}
+.m-progress-fill{display:block;height:100%;background:var(--sl-green-600);}
+
+/* ===== sections ===== */
+.m-section-inner{max-width:1280px;margin:0 auto;padding:96px 28px;}
+.m-section-h2{font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:10px 0 16px;text-wrap:balance;color:var(--sl-fg);}
+
+/* logos */
+.m-logos{background:var(--sl-bg-subtle);border-block:1px solid var(--sl-border);}
+.m-logos-inner{max-width:1280px;margin:0 auto;padding:36px 28px;text-align:center;}
+.m-logos-row{display:flex;flex-wrap:wrap;gap:36px;justify-content:center;margin-top:14px;}
+.m-logo{font-family:var(--sl-font-sans);font-weight:700;color:var(--sl-fg-subtle);letter-spacing:-.01em;font-size:18px;opacity:.72;}
+
+/* features */
+.m-features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:42px;}
+.m-feature{padding:28px;background:#fff;border:1px solid var(--sl-border);border-radius:14px;transition:border-color var(--sl-dur-base),box-shadow var(--sl-dur-base);}
+.m-feature:hover{border-color:var(--sl-border-strong);box-shadow:var(--sl-shadow-md);}
+.m-feature-icon{width:44px;height:44px;border-radius:10px;background:var(--sl-success-100);color:var(--sl-success-700);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.m-feature-icon svg{width:22px;height:22px;}
+.m-feature-t{font-size:18px;font-weight:700;margin:0 0 8px;color:var(--sl-fg);}
+.m-feature-b{font-size:15px;line-height:1.55;color:var(--sl-fg-muted);margin:0;}
+
+/* stats */
+.m-stats{background:var(--sl-navy-900);color:#fff;position:relative;}
+.m-stats::before{content:"";position:absolute;inset:0;background:url(../../assets/mark-tile.png) repeat;background-size:240px 240px;opacity:.07;}
+.m-stats .m-section-inner{padding-block:72px;position:relative;}
+.m-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;}
+.m-stat-n{font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1;color:#fff;font-variant-numeric:tabular-nums;}
+.m-stat-l{font-size:14px;color:rgba(255,255,255,.7);margin-top:8px;line-height:1.45;max-width:24ch;}
+
+/* story */
+.m-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.m-story-art{aspect-ratio:1.1;border-radius:14px;background-size:cover;background-position:center;box-shadow:var(--sl-shadow-lg);}
+.m-quote{margin:24px 0;padding:22px 24px;background:var(--sl-bg-subtle);border-left:3px solid var(--sl-accent);border-radius:0 10px 10px 0;font-size:18px;line-height:1.55;color:var(--sl-fg);}
+.m-quote footer{margin-top:12px;font-size:14px;color:var(--sl-fg-subtle);font-weight:400;}
+.m-quote footer b{color:var(--sl-fg);}
+
+/* pricing */
+.m-pricing{background:var(--sl-bg-subtle);}
+.m-pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.m-tier{position:relative;background:#fff;border:1px solid var(--sl-border);border-radius:14px;padding:32px;display:flex;flex-direction:column;}
+.m-tier--featured{border-color:var(--sl-navy-700);box-shadow:var(--sl-shadow-lg);transform:translateY(-8px);}
+.m-tier-flag{position:absolute;top:-12px;left:24px;background:var(--sl-navy-700);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;}
+.m-tier-name{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sl-accent-hover);}
+.m-tier-price{margin:8px 0 12px;display:flex;align-items:baseline;gap:6px;}
+.m-tier-p{font-size:48px;font-weight:800;letter-spacing:-.02em;color:var(--sl-fg);}
+.m-tier-per{color:var(--sl-fg-subtle);font-size:14px;}
+.m-tier-desc{font-size:14px;line-height:1.55;color:var(--sl-fg-muted);margin:0 0 18px;}
+.m-tier-feats{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px;flex:1;}
+.m-tier-feats li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--sl-fg);}
+.m-tier-feats svg{width:18px;height:18px;color:var(--sl-success-500);flex-shrink:0;margin-top:2px;}
+
+/* cta band */
+.m-cta-band{background:var(--sl-navy-900);color:#fff;position:relative;overflow:hidden;}
+.m-cta-band::before{content:"";position:absolute;inset:0;background:url(../../assets/mark-tile.png) repeat;background-size:220px 220px;opacity:.08;}
+.m-cta-inner{position:relative;max-width:880px;margin:0 auto;padding:96px 28px;text-align:center;}
+.m-cta-h2{font-size:48px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0 0 14px;color:#fff;}
+.m-cta-p{font-size:18px;color:rgba(255,255,255,.78);max-width:540px;margin:0 auto 28px;}
+.m-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+
+/* footer */
+.m-footer{background:#0B2238;color:rgba(255,255,255,.72);}
+.m-footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px;padding-block:64px 32px;}
+.m-footer-brand p{font-size:14px;color:rgba(255,255,255,.6);max-width:28ch;line-height:1.5;}
+.m-footer-h{color:#fff;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+.m-footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
+.m-footer a{color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;cursor:pointer;}
+.m-footer a:hover{color:#fff;}
+.m-footer-base{border-top:1px solid rgba(255,255,255,.08);max-width:1280px;margin:0 auto;padding:20px 28px;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.55);flex-wrap:wrap;gap:16px;}
+
+/* modal */
+.m-modal-backdrop{position:fixed;inset:0;background:rgba(11,34,56,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;z-index:1100;padding:20px;}
+.m-modal{background:#fff;border-radius:14px;padding:32px;max-width:480px;width:100%;position:relative;box-shadow:var(--sl-shadow-xl);}
+.m-modal-close{position:absolute;top:14px;right:14px;background:transparent;border:0;cursor:pointer;color:var(--sl-fg-subtle);width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.m-modal-close:hover{background:var(--sl-ink-100);color:var(--sl-fg);}
+.m-modal-h{font-size:24px;font-weight:800;margin:8px 0 8px;letter-spacing:-.02em;}
+.m-modal-p{color:var(--sl-fg-muted);margin:0 0 20px;}
+.m-form{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;}
+.m-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--sl-fg);}
+.m-form input,.m-form select{font:inherit;font-size:14px;font-weight:400;padding:10px 12px;border:1px solid var(--sl-border-strong);border-radius:10px;color:var(--sl-fg);background:#fff;}
+.m-form input:focus,.m-form select:focus{outline:none;border-color:var(--sl-accent);box-shadow:var(--sl-shadow-focus);}
+.m-modal-actions{display:flex;gap:10px;justify-content:flex-end;}
+.m-modal-success{text-align:center;padding:8px 0;}
+.m-success-ico{width:56px;height:56px;border-radius:50%;background:var(--sl-success-100);color:var(--sl-success-700);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.m-success-ico svg{width:28px;height:28px;}

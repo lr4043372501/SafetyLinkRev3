@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:var(--sl-bg-subtle);margin:0;padding:32px;font-family:var(--sl-font-sans);}
+.row{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+.box{background:#fff;height:80px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--sl-font-mono);font-size:11px;color:var(--sl-fg-subtle);}
+.cap{margin-top:8px;font-family:var(--sl-font-mono);font-size:11px;color:var(--sl-fg-subtle);text-align:center;}
+</style></head>
+<body>
+<div class="row">
+  <div><div class="box" style="box-shadow:var(--sl-shadow-xs);">xs</div><div class="cap">--sl-shadow-xs</div></div>
+  <div><div class="box" style="box-shadow:var(--sl-shadow-sm);">sm</div><div class="cap">cards · default</div></div>
+  <div><div class="box" style="box-shadow:var(--sl-shadow-md);">md</div><div class="cap">hover · dropdown</div></div>
+  <div><div class="box" style="box-shadow:var(--sl-shadow-lg);">lg</div><div class="cap">modal · popover</div></div>
+  <div><div class="box" style="box-shadow:var(--sl-shadow-xl);">xl</div><div class="cap">sheet</div></div>
+</div>
+<div style="margin-top:14px;color:var(--sl-fg-subtle);font-size:12px;">Two-layer, navy-tinted shadows — never pure black</div>
+</body></html>

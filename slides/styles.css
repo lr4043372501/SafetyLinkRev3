@@ -1,0 +1,73 @@
+@import url("../colors_and_type.css");
+
+body{margin:0;background:#222;font-family:var(--sl-font-sans);}
+.deck{display:flex;flex-direction:column;gap:24px;padding:24px;align-items:center;}
+.slide{width:1280px;height:720px;background:#fff;color:var(--sl-fg);position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.s-pad{padding:80px 96px;flex:1;display:flex;flex-direction:column;}
+.s-foot{position:absolute;left:96px;right:96px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--sl-fg-subtle);font-family:var(--sl-font-mono);}
+.s-foot img{height:22px;}
+.s-eyebrow{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sl-accent-hover);margin-bottom:18px;}
+
+/* TITLE */
+.s-title{background:linear-gradient(180deg,#14375B,#0B2238);color:#fff;}
+.s-title::before{content:"";position:absolute;inset:0;background:url(../assets/mark-tile.png);background-size:260px 260px;background-repeat:repeat;opacity:.08;}
+.s-title .s-pad{position:relative;justify-content:flex-end;padding-bottom:120px;}
+.s-title .eyeb{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sl-green-400);margin-bottom:18px;}
+.s-title h1{font-size:96px;font-weight:800;letter-spacing:-.02em;line-height:1;margin:0 0 18px;max-width:900px;text-wrap:balance;}
+.s-title p{font-size:24px;color:rgba(255,255,255,.78);margin:0;max-width:780px;line-height:1.45;}
+.s-title .lock{position:absolute;top:60px;left:96px;display:flex;align-items:center;gap:14px;color:#fff;}
+.s-title .lock img{height:42px;display:block;}
+.s-title .lock span{font-weight:800;font-size:22px;letter-spacing:-.01em;}
+.s-title .meta{position:absolute;bottom:40px;left:96px;right:96px;display:flex;justify-content:space-between;font-size:14px;color:rgba(255,255,255,.55);font-family:var(--sl-font-mono);}
+
+/* SECTION */
+.s-section{background:var(--sl-navy-900);color:#fff;}
+.s-section::before{content:"";position:absolute;inset:0;background:url(../assets/mark-tile.png);background-size:260px 260px;background-repeat:repeat;opacity:.06;}
+.s-section .s-pad{position:relative;justify-content:center;}
+.s-section .ch{font-size:18px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sl-green-400);margin-bottom:14px;font-family:var(--sl-font-mono);}
+.s-section h1{font-size:120px;font-weight:800;letter-spacing:-.03em;line-height:.95;margin:0 0 18px;text-wrap:balance;max-width:1000px;}
+.s-section p{font-size:22px;color:rgba(255,255,255,.7);max-width:780px;margin:0;line-height:1.45;}
+
+/* CONTENT */
+.s-content h2{font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0 0 36px;text-wrap:balance;max-width:1000px;}
+.s-content .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.s-content .ic{width:48px;height:48px;border-radius:12px;background:var(--sl-success-100);color:var(--sl-success-700);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.s-content .ic svg{width:26px;height:26px;}
+.s-content h3{font-size:22px;font-weight:700;margin:0 0 8px;}
+.s-content p{font-size:16px;line-height:1.55;color:var(--sl-fg-muted);margin:0;}
+
+/* BIG NUMBER */
+.s-big{background:var(--sl-bg-subtle);}
+.s-big .s-pad{justify-content:center;align-items:flex-start;}
+.s-big .n{font-size:300px;font-weight:800;letter-spacing:-.04em;line-height:.85;color:var(--sl-navy-900);font-variant-numeric:tabular-nums;}
+.s-big .n .sub{color:var(--sl-accent);}
+.s-big h2{font-size:36px;font-weight:700;letter-spacing:-.01em;line-height:1.15;margin:24px 0 12px;max-width:900px;}
+.s-big p{font-size:18px;color:var(--sl-fg-muted);max-width:720px;margin:0;line-height:1.5;}
+
+/* COMPARISON */
+.s-comp h2{font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin:0 0 32px;}
+.s-comp .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1;}
+.s-comp .col{border-radius:16px;padding:36px;display:flex;flex-direction:column;}
+.s-comp .col.before{background:var(--sl-bg-subtle);border:1px solid var(--sl-border);}
+.s-comp .col.after{background:var(--sl-navy-900);color:#fff;}
+.s-comp .col h3{font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 18px;}
+.s-comp .col.before h3{color:var(--sl-fg-subtle);}
+.s-comp .col.after h3{color:var(--sl-green-400);}
+.s-comp .col h4{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:0 0 24px;line-height:1.1;}
+.s-comp .col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;}
+.s-comp .col li{display:flex;gap:12px;align-items:flex-start;font-size:18px;line-height:1.45;}
+.s-comp .col.before li svg{color:var(--sl-fg-subtle);width:22px;height:22px;flex-shrink:0;margin-top:2px;}
+.s-comp .col.after li svg{color:var(--sl-green-400);width:22px;height:22px;flex-shrink:0;margin-top:2px;}
+
+/* QUOTE */
+.s-quote{background:#fff;}
+.s-quote .s-pad{justify-content:center;}
+.s-quote .mark{font-size:160px;line-height:.5;color:var(--sl-green-300);font-family:var(--sl-font-display);font-weight:800;margin-bottom:8px;}
+.s-quote q{quotes:none;display:block;font-size:48px;font-weight:700;line-height:1.2;letter-spacing:-.015em;max-width:1000px;color:var(--sl-fg);text-wrap:balance;}
+.s-quote q::before,.s-quote q::after{content:"";}
+.s-quote .who{display:flex;align-items:center;gap:16px;margin-top:36px;}
+.s-quote .av{width:56px;height:56px;border-radius:50%;background:var(--sl-navy-700);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;}
+.s-quote .who-name{font-size:18px;font-weight:700;}
+.s-quote .who-meta{font-size:14px;color:var(--sl-fg-subtle);}
+
+.s-foot .pg{font-family:var(--sl-font-mono);}

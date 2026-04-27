@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0;padding:24px;}
+.swatch{border-radius:10px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;min-height:96px;}
+.swatch .name{font-size:13px;font-weight:600;letter-spacing:0;}
+.swatch .hex{font-family:var(--sl-font-mono);font-size:11px;opacity:.85;}
+</style></head>
+<body>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;font-family:var(--sl-font-sans);">
+  <div class="swatch" style="background:var(--sl-success-100);border:1px solid var(--sl-success-500);color:var(--sl-success-700);">
+    <div class="name">Success · compliant</div>
+    <div class="hex">bg #E8F8E9 · fg #1A8429</div>
+  </div>
+  <div class="swatch" style="background:var(--sl-warning-100);border:1px solid var(--sl-warning-500);color:var(--sl-warning-700);">
+    <div class="name">Warning · expiring</div>
+    <div class="hex">bg #FEF3C7 · fg #B45309</div>
+  </div>
+  <div class="swatch" style="background:var(--sl-danger-100);border:1px solid var(--sl-danger-500);color:var(--sl-danger-700);">
+    <div class="name">Danger · violation</div>
+    <div class="hex">bg #FEE4E2 · fg #B42318</div>
+  </div>
+  <div class="swatch" style="background:var(--sl-info-100);border:1px solid var(--sl-info-500);color:var(--sl-info-700);">
+    <div class="name">Info</div>
+    <div class="hex">bg #E3EAF3 · fg #1F4A74</div>
+  </div>
+</div>
+<div style="margin-top:14px;display:flex;gap:10px;font-family:var(--sl-font-sans);">
+  <div style="background:var(--sl-hivis-yellow);color:var(--sl-ink-900);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;">Hi-vis · #F5D300</div>
+  <div style="background:var(--sl-hivis-orange);color:#fff;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;">Hi-vis · #FF7A1A</div>
+  <span style="color:var(--sl-fg-subtle);font-size:12px;align-self:center;">— badges + alarms only, mirrors real PPE</span>
+</div>
+</body></html>

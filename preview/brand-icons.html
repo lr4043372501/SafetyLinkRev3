@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>html,body{background:transparent;margin:0;padding:24px;font-family:var(--sl-font-sans);}
+.grid{display:grid;grid-template-columns:repeat(8,1fr);gap:14px;}
+.cell{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--sl-fg);}
+.cell .lbl{font-family:var(--sl-font-mono);font-size:10px;color:var(--sl-fg-subtle);}
+svg{stroke-width:1.5;width:24px;height:24px;color:var(--sl-fg);}
+</style></head>
+<body>
+<div class="grid">
+  <div class="cell"><i data-lucide="hard-hat"></i><span class="lbl">hard-hat</span></div>
+  <div class="cell"><i data-lucide="shield-check"></i><span class="lbl">shield-check</span></div>
+  <div class="cell"><i data-lucide="clipboard-check"></i><span class="lbl">clipboard</span></div>
+  <div class="cell"><i data-lucide="alert-triangle" style="color:var(--sl-warning-500);"></i><span class="lbl">alert</span></div>
+  <div class="cell"><i data-lucide="siren" style="color:var(--sl-danger-500);"></i><span class="lbl">siren</span></div>
+  <div class="cell"><i data-lucide="check-circle" style="color:var(--sl-success-500);"></i><span class="lbl">check</span></div>
+  <div class="cell"><i data-lucide="file-warning"></i><span class="lbl">file-warn</span></div>
+  <div class="cell"><i data-lucide="wrench"></i><span class="lbl">wrench</span></div>
+  <div class="cell"><i data-lucide="users"></i><span class="lbl">users</span></div>
+  <div class="cell"><i data-lucide="map-pin"></i><span class="lbl">map-pin</span></div>
+  <div class="cell"><i data-lucide="calendar"></i><span class="lbl">calendar</span></div>
+  <div class="cell"><i data-lucide="bar-chart-3"></i><span class="lbl">chart</span></div>
+  <div class="cell"><i data-lucide="flame" style="color:var(--sl-danger-500);"></i><span class="lbl">flame</span></div>
+  <div class="cell"><i data-lucide="book-open"></i><span class="lbl">book</span></div>
+  <div class="cell"><i data-lucide="camera"></i><span class="lbl">camera</span></div>
+  <div class="cell"><i data-lucide="settings"></i><span class="lbl">settings</span></div>
+</div>
+<script>lucide.createIcons();</script>
+</body></html>

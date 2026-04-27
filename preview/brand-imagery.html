@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0;padding:24px;font-family:var(--sl-font-sans);}
+.row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.box{aspect-ratio:1.6;border-radius:10px;overflow:hidden;background:#0B2238;display:flex;align-items:end;padding:12px;color:rgba(255,255,255,.78);font-size:12px;}
+.box.a{background:url(../assets/placeholder-worksite-1.svg) center/cover;}
+.box.b{background:url(../assets/placeholder-worksite-2.svg) center/cover;}
+.box.c{background:linear-gradient(135deg,#1F4A74,#0B2238);position:relative;}
+.box.c::before{content:"";position:absolute;inset:0;background:url(../assets/mark-tile.png) repeat;background-size:180px 180px;opacity:.1;}
+.box.c span{position:relative;}
+</style></head>
+<body>
+<div class="row">
+  <div class="box a"><span>Wide environmental</span></div>
+  <div class="box b"><span>Hands at work, close-up</span></div>
+  <div class="box c"><span>Chain-link motif fallback</span></div>
+</div>
+<div style="margin-top:12px;color:var(--sl-fg-subtle);font-size:12px;">Documentary, slightly cool grade. Real workers in correct PPE.</div>
+</body></html>

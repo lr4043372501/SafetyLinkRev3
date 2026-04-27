@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:var(--sl-bg-subtle);margin:0;padding:20px;font-family:var(--sl-font-sans);}
+.card{background:#fff;border:1px solid var(--sl-border);border-radius:10px;padding:20px;box-shadow:var(--sl-shadow-sm);}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sl-accent-hover);}
+.title{font-size:17px;font-weight:700;color:var(--sl-fg);margin:6px 0 4px;}
+.body{font-size:13px;line-height:1.5;color:var(--sl-fg-muted);margin:0;}
+.meta{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:12px;color:var(--sl-fg-subtle);}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--sl-success-500);}
+.bar{height:6px;background:var(--sl-ink-100);border-radius:3px;overflow:hidden;margin-top:14px;}
+.fill{height:100%;background:var(--sl-green-600);border-radius:3px;}
+</style></head>
+<body>
+<div class="row">
+  <div class="card">
+    <div class="eyebrow">Inspection</div>
+    <div class="title">Bell Park Yard 4 · weekly walk</div>
+    <p class="body">12 of 14 items checked. 2 findings open, both minor.</p>
+    <div class="bar"><div class="fill" style="width:86%;"></div></div>
+    <div class="meta"><span class="dot"></span>On track · due Friday · INS-1182</div>
+  </div>
+  <div class="card">
+    <div class="eyebrow" style="color:var(--sl-warning-700);">Training expiring</div>
+    <div class="title">Lockout / tagout · 7 workers</div>
+    <p class="body">Recertification window opens in 14 days. Schedule before May 11.</p>
+    <div class="meta"><span class="dot" style="background:var(--sl-warning-500);"></span>Action needed · 29 CFR 1910.147</div>
+  </div>
+</div>
+</body></html>

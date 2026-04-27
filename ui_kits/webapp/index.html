@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SafetyLink — Web app UI Kit</title>
+<link rel="stylesheet" href="styles.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel" src="Shell.jsx"></script>
+<script type="text/babel" src="Dashboard.jsx"></script>
+<script type="text/babel" src="Inspections.jsx"></script>
+<script type="text/babel" src="InspectionDetail.jsx"></script>
+<script type="text/babel">
+const { useState, useEffect } = React;
+function App() {
+  const [view, setView] = useState('dashboard');
+  const [insp, setInsp] = useState(null);
+  useEffect(() => { if (window.lucide) window.lucide.createIcons(); });
+  const open = (r) => { setInsp(r); setView('detail'); };
+  const titles = {dashboard:'Dashboard', inspections:'Inspections', detail:'Inspection', training:'Training', settings:'Settings', findings:'Findings', docs:'Documents', workers:'Workers', sites:'Sites'};
+  return (
+    <WebappShell view={view} setView={setView} title={titles[view]||'SafetyLink'}>
+      {view==='dashboard' && <WebappDashboard onOpenInspection={open}/>}
+      {view==='inspections' && <WebappInspections onOpen={open}/>}
+      {view==='detail' && <WebappInspectionDetail insp={insp} onBack={()=>setView('inspections')}/>}
+      {view==='training' && <WebappTraining/>}
+      {view==='settings' && <WebappSettings/>}
+      {(view==='findings'||view==='docs'||view==='workers'||view==='sites') && (
+        <div className="card"><div className="bd" style={{padding:48,textAlign:'center'}}>
+          <h3 style={{margin:'0 0 8px'}}>{titles[view]}</h3>
+          <p style={{color:'var(--sl-fg-muted)',margin:0}}>Section stub — see Dashboard, Inspections, Training, or Settings for full screens.</p>
+        </div></div>
+      )}
+    </WebappShell>
+  );
+}
+ReactDOM.createRoot(document.getElementById("app")).render(<App/>);
+</script>
+</body>
+</html>

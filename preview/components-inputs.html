@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0;padding:24px;font-family:var(--sl-font-sans);}
+.field{margin-bottom:14px;}
+label{display:block;font-size:13px;font-weight:600;color:var(--sl-fg);margin-bottom:6px;}
+.input{width:100%;border:1px solid var(--sl-border-strong);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;color:var(--sl-fg);background:#fff;}
+.input::placeholder{color:var(--sl-fg-disabled);}
+.input:focus{outline:none;border-color:var(--sl-accent);box-shadow:var(--sl-shadow-focus);}
+.help{font-size:12px;color:var(--sl-fg-subtle);margin-top:4px;}
+.error .input{border-color:var(--sl-danger-500);}
+.error .help{color:var(--sl-danger-700);}
+</style></head>
+<body>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:660px;">
+  <div class="field">
+    <label>Site name</label>
+    <input class="input" value="Bell Park Yard 4"/>
+    <div class="help">Visible to all assigned crews.</div>
+  </div>
+  <div class="field error">
+    <label>OSHA reference</label>
+    <input class="input" value="29 CFR 1910"/>
+    <div class="help">Add a section number, e.g. 1910.147.</div>
+  </div>
+  <div class="field">
+    <label>Hazard category</label>
+    <select class="input">
+      <option>Lockout / tagout</option><option>Fall protection</option><option>PPE</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>Inspection date</label>
+    <input class="input" type="text" value="Apr 27, 2026"/>
+  </div>
+</div>
+</body></html>
